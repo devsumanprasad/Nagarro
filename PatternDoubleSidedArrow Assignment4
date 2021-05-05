@@ -1,0 +1,100 @@
+import java.util.*;
+public class  PatternDoubleSidedArrow{
+
+	public static void main(String[] args) {
+
+		Scanner in = new Scanner(System.in);
+
+		int n = in.nextInt();
+
+		int nst = 1;
+
+		int nsp=n-1;
+
+		int csp=0;
+
+		int col=0;
+
+		int isp=0;
+
+		int osp=-1;
+
+		int row=0;
+
+		for(row=1; row<=n;row++) 
+
+		{
+
+			for(csp=1;csp<=nsp;csp++) 
+
+			{
+
+				System.out.print("  ");
+
+			}
+
+			for(col=nst;col>=1;col--) 
+
+			{
+
+				System.out.print(col+" ");
+
+			}
+
+			for(isp=1;isp<=osp;isp++) 
+
+			{
+
+				System.out.print("  ");
+
+			}
+
+			if(nst==1)
+
+				col = 2;
+
+			else
+
+				col = 1;
+
+			for(;col<=nst;col++) 
+
+			{
+
+				System.out.print(col+" ");
+
+			}
+
+			System.out.println();
+
+			if(row <= n/2)
+
+			{
+
+				osp=osp+2;
+
+				nst++;
+
+				nsp=nsp-2;;
+
+			}
+
+			else
+
+			{
+
+				osp=osp-2;
+
+				nst--;
+
+				nsp=nsp+2;
+
+			}
+
+		}
+
+		
+
+	}
+
+}
