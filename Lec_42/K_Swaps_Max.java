@@ -8,6 +8,7 @@ public class K_Swaps_Max {
 		Scanner scn = new Scanner(System.in);
 		String num = scn.next();
 		int K = scn.nextInt();
+		max = Integer.valueOf(num);
 		char[] num_arr = num.toCharArray();
 		K_swap(num_arr, K, "");
 		System.out.println(max);
